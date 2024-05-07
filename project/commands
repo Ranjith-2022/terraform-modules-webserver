@@ -1,0 +1,47 @@
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+   sudo yum -y install terraform
+   
+   aws configure
+   
+   create s3 bucket "terraform-modules-1"
+   
+   cd project/dev/network
+   
+   terraform init
+   terraform plan
+   terraform auto-approve
+   
+   cd ../webserver
+   
+   ssh-keygen -t rsa -f project-dev
+   
+   terraform init
+   terraform plan
+   terraform auto-approve
+   
+   cd ../../prod/network
+   
+   terraform init
+   terraform plan
+   terraform auto-approve
+   
+   cd ../webserver
+   
+   ssh-keygen -t rsa -f project-prod
+    
+   terraform init
+   terraform plan
+   terraform auto-approve
+   
+   terraform destroy -auto-approve
+   
+   cd ../network
+   
+   terraform destroy -auto-approve
+   
+   cd ../../dev/webserver
+   terraform destroy -auto-approve
+      
+   cd ../network
+   terraform destroy -auto-approve
