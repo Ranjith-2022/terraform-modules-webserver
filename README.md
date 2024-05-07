@@ -78,4 +78,4 @@ cd ../network
 terraform destroy --auto-approve
 ```
 
-This README provides guidance on setting up and managing the infrastructure for both development and production environments using Terraform. Adjust the commands and steps as needed for your specific requirements.
+This README provides guidance on setting up and managing the infrastructure for both development and production environments using Terraform.
