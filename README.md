@@ -34,13 +34,13 @@ terraform apply --auto-approve
 #### Step 5: Creating SSH Key for Dev Webserver
 
 ```bash
+cd ../webserver
 ssh-keygen -t rsa -f project-dev
 ```
 
 #### Step 6: Configuring Dev - Webserver
 
 ```bash
-cd ../webserver
 terraform init
 terraform plan
 terraform apply --auto-approve
@@ -58,13 +58,13 @@ terraform apply --auto-approve
 #### Step 8: Creating SSH Key for Prod Webserver
 
 ```bash
+cd ../webserver
 ssh-keygen -t rsa -f project-prod
 ```
 
 #### Step 9: Configuring Prod - Webserver
 
 ```bash
-cd ../webserver
 terraform init
 terraform plan
 terraform apply --auto-approve
