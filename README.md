@@ -4,6 +4,10 @@
 
 This project aims to provide support for deploying webserver infrastructure using Terraform across multiple environments. Below are the commands and steps to set up and manage the infrastructure.
 
+## Architecture
+
+![image](https://github.com/Ranjith-2022/terraform-modules-webserver/assets/114111480/fa0ad836-910d-4539-8101-dca1a64389dd)
+
 ### Commands
 
 #### Step 1: Terraform Installation
